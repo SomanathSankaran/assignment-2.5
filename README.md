@@ -12,8 +12,11 @@ A Hadoop cluster is a special type of computational cluster designed specificall
 Such clusters run Hadoop's open source distributed processing software on low-cost commodity computers. Typically one machine in the cluster is designated as the NameNode and another machine the as JobTracker; these are the masters. The rest of the machines in the cluster act as both DataNode and TaskTracker; these are the slaves. Hadoop clusters are often referred to as "shared nothing" systems because the only thing that is shared between nodes is the network that connects them. 
 
 Hadoop clusters are known for boosting the speed of data analysis applications. They also are highly scalable: If a cluster's processing power is overwhelmed by growing volumes of data, additional cluster nodes can be added to increase throughput. Hadoop clusters also are highly resistant to failure because each piece of data is copied onto other cluster nodes, which ensures that the data is not lost if one node fails.
-QN 2.What is meant by a Rack and explain the rack arrangement in a hadoop cluster
-Rack-mounted describes a unit of electronic equipment that is housed in a metal framework called an equipment rack. Usually, an equipment rack contains multiple "bays," each designed to hold a unit of equipment such as a computer server . Typically, the equipment unit is mounted (inserted into a bay in the rack) and secured in place with screws. 
+
+QN 2.WHAT IS MEANT BY RACK AND EXPLAIN RACK ARRANGEMENT IN HADOOP  CLUSTER
+
+ RACK
+mounted describes a unit of electronic equipment that is housed in a metal framework called an equipment rack. Usually, an equipment rack contains multiple "bays," each designed to hold a unit of equipment such as a computer server . Typically, the equipment unit is mounted (inserted into a bay in the rack) and secured in place with screws. 
 Rack-mounted describes a unit of electronic equipment that is housed in a metal framework called an equipment rack. Usually, an equipment rack contains multiple "bays," each designed to hold a unit of equipment such as a computer server . Typically, the equipment unit is mounted (inserted into a bay in the rack) and secured in place with screws.
 
 A rack server, also called a rack-mounted server, is a computer dedicated to use as a server and designed to be installed in a framework called a rack. The rack contains multiple mounting slots called bays, each designed to hold a hardware unit secured in place with screws. A rack server has a low-profile enclosure, in contrast to a tower server, which is built into an upright, standalone cabinet.
@@ -21,6 +24,7 @@ A rack server, also called a rack-mounted server, is a computer dedicated to use
 A single rack can contain multiple servers stacked one above the other, consolidating network resources and minimizing the required floor space. The rack server configuration also simplifies cabling among network components. In an equipment rack filled with servers, a special cooling system is necessary to prevent excessive heat buildup that would otherwise occur when many power-dissipating components are confined in a small space.
  1 RACK UNIT is equal to  1 and quarter inches and it is the space between three consecutive holes in a rack.
 
+RACK ARRANGEMENT IN HADOOP  CLUSTER
 
 In Hadoop we assume that there are 3 blocks namely A,B,C with replication factor of 3 and there are 3 physical Racks(1,2,3).So THERE WILL BE "9" BLOCKS((A,A1,A2),(B,B1,B2),(C,C1,C2)).Due to rack awareness the replicas A A1 and A2 will be stored in seperate racks AS 
 SHOWN IN FIGURE ATTACHED
